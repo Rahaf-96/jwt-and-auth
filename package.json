@@ -1,37 +1,38 @@
 {
-  "name": "jwt-and-auth",
-  "version": "1.0.0",
-  "description": "https://hackmd.io/lCsuFB6xR7SsS89_oulwkg?view",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rahaf-96/jwt-and-auth.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rahaf-96/jwt-and-auth/issues"
-  },
-  "homepage": "https://github.com/Rahaf-96/jwt-and-auth#readme",
-  "dependencies": {
-    "@hapi/joi": "^17.1.1",
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.2",
-    "pg": "^7.18.2",
-    "prettier": "^1.19.1",
-    "supertest": "^4.0.2",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.13.2"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1"
-  }
+	"name": "jwt-and-auth",
+	"version": "1.0.0",
+	"description": "https://hackmd.io/lCsuFB6xR7SsS89_oulwkg?view",
+	"main": "index.js",
+	"scripts": {
+		"test": "tape tests/*.js | tap-spec",
+		"start": "nodemon src/index.js "
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Rahaf-96/jwt-and-auth.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Rahaf-96/jwt-and-auth/issues"
+	},
+	"homepage": "https://github.com/Rahaf-96/jwt-and-auth#readme",
+	"dependencies": {
+		"@hapi/joi": "^17.1.1",
+		"bcryptjs": "^2.4.3",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"nodemon": "^2.0.2",
+		"pg": "^7.18.2",
+		"prettier": "^1.19.1",
+		"supertest": "^4.0.2",
+		"tap-spec": "^5.0.0",
+		"tape": "^4.13.2"
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-base": "^14.1.0",
+		"eslint-plugin-import": "^2.20.1"
+	}
 }
