@@ -61,3 +61,14 @@
 	font-size: 20px;
 	align-self: center;
 }
+
+.notfound,
+.serverdown {
+	display: flex;
+	justify-content: center;
+}
+
+.notfound_img,
+.serverdown_img {
+	width: 70vw;
+}
