@@ -5,7 +5,6 @@ const checkEmail = require('../models/queries/checkemail');
 const validationObject = {
 	username: joi
 		.string()
-		.alphanum()
 		.min(2)
 		.max(40),
 	email: joi
