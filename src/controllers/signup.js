@@ -28,19 +28,21 @@ const signupValidation = (req, res) => {
 	const { error, value } = schema.validate(req.body);
 	if (error) res.status(400).json({ error });
 	else {
-		checkEmail(value, (err, result) => {
-			if (result.length !== 0) {
-				res.status(400).json({
-					message: 'email already exists',
-				});
-			} else {
-				addUser(value);
-				res.status(200).json({
-					message: 'User created successfully',
-					username: value.username,
-				});
-			}
-		});
+		checkEmail(value)
+			.then((result) => {
+				if (result.length !== 0) {
+					res.status(400).json({
+						message: 'email already exists',
+					});
+				} else {
+					addUser(value);
+					res.status(200).json({
+						message: 'User created successfully',
+						username: value.username,
+					});
+				}
+			})
+			.catch((err) => console.log(err));
 	}
 };
 

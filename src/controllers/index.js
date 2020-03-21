@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { notFound, serverError } = require('./errors');
-const path = require('path');
+const { signupPath, serverErrorPath } = require('./paths');
 const signupController = require('./signup');
 const loginController = require('./login');
 const cookieParser = require('cookie-parser');
@@ -8,13 +8,8 @@ const userAuthentication = require('./userauth');
 
 router.use(cookieParser());
 
-router.get('/signup', (req, res) => {
-	res.sendFile(path.join(__dirname, '..', '..', 'public', 'signup.html'));
-});
-router.get('/server-error-test', (req, res) => {
-	res.sendFile(path.join(__dirname, '..', 'public', 'signup.html'));
-});
-
+router.get('/signup', signupPath);
+router.get('/server-error-test', serverErrorPath);
 router.get('/username', userAuthentication);
 
 router.post('/signup', signupController);
