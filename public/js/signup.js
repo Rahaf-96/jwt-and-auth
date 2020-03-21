@@ -25,7 +25,9 @@ signupButton.addEventListener('click', (e) => {
 		.then((response) => response.json())
 		.then((res) => {
 			if (res.error) {
-				signupNote.innerHTML = 'make sure your email and password are valid';
+				console.log(res.error.details[0]);
+				signupNote.innerHTML =
+					'make sure your username, email and password are valid';
 				signupNote.style.color = 'red';
 			} else {
 				console.log(res);
