@@ -26,7 +26,7 @@ loginButton.addEventListener('click', (e) => {
 				loginNote.style.color = 'red';
 			} else {
 				if (res.message === 'logged in successfully') {
-					window.location = '/user';
+					window.location = '/username';
 				}
 			}
 		})
